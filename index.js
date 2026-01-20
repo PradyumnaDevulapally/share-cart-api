@@ -5,6 +5,9 @@ import { Resend } from "resend";
 
 const app = express();
 
+/* 🔐 TRUST RENDER PROXY */
+app.set("trust proxy", 1);
+
 /* --------------------
    BODY PARSERS
    -------------------- */
