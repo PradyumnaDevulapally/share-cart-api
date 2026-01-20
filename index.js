@@ -48,7 +48,6 @@ app.get("/", (req, res) => {
    -------------------- */
 app.post("/share-cart", async (req, res) => {
   try {
-    console.log("REQ BODY:", req.body);
     const {
       recipientEmail,
       senderName,
