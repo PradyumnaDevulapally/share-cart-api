@@ -45,6 +45,7 @@ app.get("/", (req, res) => {
    -------------------- */
 app.post("/share-cart", async (req, res) => {
   try {
+    console.log("REQ BODY:", req.body);
     const {
       recipientEmail,
       senderName,
@@ -104,4 +105,4 @@ app.listen(PORT, () => {
   console.log("🚀 Server running on port", PORT);
 });
 
-console.log("REQ BODY:", req.body);
+
