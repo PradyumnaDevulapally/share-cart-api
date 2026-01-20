@@ -7,6 +7,8 @@ const app = express();
 app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+console.log("USING FROM:", "care@nivaradiamonds.com");
+
 
 // 🔒 Rate limit: 10 requests / minute / IP
 app.use(
@@ -39,7 +41,7 @@ app.post("/share-cart", async (req, res) => {
 
     // ---- Send email ----
     await resend.emails.send({
-      from: "onboarding@resend.dev", // OK for testing
+      from: "Nivara Diamonds <care@nivaradiamonds.com>", // OK for testing
       to: recipientEmail,
       replyTo: senderEmail,
       subject: `${senderName} shared a cart with you`,
